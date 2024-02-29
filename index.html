@@ -24,20 +24,6 @@
       <li>Maybe even for premium users or smth or another add on, scan players computers to optimize the hardware and fix any settings that are not optimized on their GPU, CPU, computer files or game files </li>
     </ul>
   </div>
-  <h1>Fortnite Player Stats</h1>
-    <form method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <select name="platform">
-            <option value="epic">Epic</option>
-            <option value="psn">PSN</option>
-            <option value="xbl">Xbox Live</option>
-        </select>
-        <button type="submit">Get Stats</button>
-    </form>
-    {% if stats %}
-        <h2>Stats for {{ username }}:</h2>
-        <p>Wins: {{ stats.wins }}</p>
-    {% endif %}
 
    <div id='team'>
     <h2> Meet the Team </h2>
