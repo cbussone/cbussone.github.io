@@ -30,7 +30,27 @@
     
     <p> CSquar was founded in January 2024 by MIT alums <strong>Casey Tewey</strong> and <strong>Casey Bussone</strong>. <br> <br> <img src='https://mitathletics.com/images/2022/3/11/Tewey_Casey_2022.JPG?width=300'/> <img src='https://mitathletics.com/images/2022/3/11/Bussone_Casey_2022.JPG?width=300'/> <br> <br> With a passion for Esports and the technical drive to improve its education space, they have been committed to finding objective and actionable solutions to build the necessary skills to improve Fortnite gameplay. </p>    
   </div>
+  <form id="usernameForm">
+    <label for="username">Fortnite Username:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Submit</button>
+</form>
+<div id="result"></div>
 
+<script>
+    document.getElementById('usernameForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting in the traditional way
+        var username = document.getElementById('username').value.toLowerCase(); // Get the username and convert it to lower case
+        var resultDiv = document.getElementById('result');
+
+        // Check if the username includes 'owen'
+        if (username.includes('owen')) {
+            resultDiv.innerHTML = '<strong>You are a BOT</strong>';
+        } else {
+            resultDiv.innerHTML = '<strong>You are a good player</strong>';
+        }
+    });
+</script>
   <div id='contact'>
     <h2> Contact Us </h2>
     <p> Have questions about CSquar? Feel free to reach out to us anytime! </p>
